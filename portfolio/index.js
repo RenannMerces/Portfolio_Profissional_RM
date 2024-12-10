@@ -176,4 +176,54 @@ document.addEventListener("DOMContentLoaded", function() {
         addActiveClass("inicio-port");
     });
     
-    
+// & ---------------------- CONTATO FORM ------------------------------
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    let isValid = true;
+
+    form.querySelectorAll('input, textarea').forEach(input => {
+        // Se o campo não for válido
+        if (!input.checkValidity()) {
+            input.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+        }
+    });
+
+    // Se o formulário for válido, exibe a mensagem de confirmação
+    if (isValid) {
+        // Exibe a mensagem de sucesso
+        document.getElementById('confirmationMessage').style.display = 'block';
+
+        // Limpa o formulário
+        form.reset();
+        form.querySelectorAll('.is-valid').forEach(input => input.classList.remove('is-valid'));
+    }
+});
+
+// Função para formatar o número de telefone com parênteses no DDD
+document.getElementById('phone').addEventListener('input', function (e) {
+    let phone = e.target.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
+    if (phone.length > 2 && phone.length <= 6) {
+        phone = `(${phone.substring(0, 2)}) ${phone.substring(2)}`;
+    } else if (phone.length > 6) {
+        phone = `(${phone.substring(0, 2)}) ${phone.substring(2, 7)}-${phone.substring(7, 11)}`;
+    }
+    e.target.value = phone;
+});
+
+// Função para permitir apenas letras e limitar o tamanho do nome
+document.getElementById('name').addEventListener('input', function (e) {
+    // Remove qualquer caractere não permitido (só permite letras e espaços)
+    let input = e.target.value.replace(/[^a-zA-Zá-úÁ-Ú\s]/g, '');
+
+    // Atualiza o campo com o valor corrigido
+    e.target.value = input;
+});
+
+

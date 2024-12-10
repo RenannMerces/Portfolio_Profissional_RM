@@ -457,3 +457,233 @@ button.btn-outline-light:hover {
     background-color: #B74B4B;
     color: #ffffff;
 }
+
+/** -------------------------------- FAQ ----------------------------------*/
+
+#faq{
+    background: linear-gradient(to bottom, #034a49, #160D18);
+}
+
+#faq p{
+    color: white !important;
+}
+
+#faq .faq-titulo {
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: underline #B74B4B;
+    text-underline-offset: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+#faq .accordion-item {
+    border-radius: 25px !important;
+    border:none;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#faq .accordion-header {
+    background: #f8f9fa;
+}
+
+#faq .accordion-button {
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #c4c4c4;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+#faq .accordion-button:not(.collapsed) {
+    background-color: #b84545;
+    color: #fff;
+}
+
+#faq .accordion-body {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #495057;
+    border-top: 1px solid #e9ecef;
+}
+
+#faq .accordion-button:hover {
+    background-color: #B74B4B;
+    color: #fff;
+}
+
+/** ------------------------------Contato---------------------------- */
+
+#contato {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.text-secondary {
+    color: #676666 !important;
+}
+
+#contato h2 {
+    color: #034341 !important;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: underline #B74B4B;
+    text-underline-offset: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+#contato p {
+    color: #6c757d;
+    font-size: 1.1rem; /* Texto um pouco menor */
+}
+
+#contato form {
+    background: #ffffff;
+    border: 2px solid #c4c4c4 !important;
+    border-radius: 25px !important; 
+    padding: 25px;
+    max-width: 600px;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+#contato .form-control {
+    background: #fdfdfd;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    color: #495057;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05) !important; 
+    transition: all 0.3s;
+    padding: 12px;
+}
+
+#contato .form-control::placeholder {
+    color: #6c757d;
+    opacity: 0.6; 
+}
+
+#contato .form-control:focus {
+    background: #fff;
+    border-color: #026F6E;
+    box-shadow: 0 0 12px rgba(2, 111, 110, 0.3), 0 0 20px rgba(0, 123, 255, 0.1); 
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#contato .form-control:focus::placeholder {
+    color: #026F6E;
+    opacity: 1;
+}
+
+#contato .form-control:active {
+    border-color: #026F6E;
+    background: #f1f1f1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contato .form-control.is-invalid {
+    border-color: #e74c3c;
+    background-color: #f8d7da; 
+}
+
+#contato .invalid-feedback {
+    font-size: 0.875rem;
+    color: #e74c3c;
+    display: none; 
+}
+
+#contato .form-control.is-valid {
+    border-color: #28a745; 
+    background-color: #d4edda;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); 
+}
+
+#contato .is-invalid + .invalid-feedback {
+    display: block; 
+}
+
+#contato button {
+    background-color: #1CA39E;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem; /* Tamanho de fonte ajustado */
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(28, 163, 158, 0.3), 0 2px 10px rgba(0, 123, 255, 0.1); /* Sombras mais suaves e difusas no botão */
+    padding: 14px;
+}
+
+#contato button:hover {
+    background: #026F6E;
+    box-shadow: 0 7px 25px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+#contato button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+
+/*& ------------------------------ Footer ---------------------------------*/
+/* Estilo do Footer */
+footer {
+    background: linear-gradient(to right, #023332, #160D18);
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    color: #f8f9fa;
+    text-transform: uppercase;
+}
+
+footer p, footer a {
+    color: #d6d8db;
+    font-size: 1rem;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .footer-logo {
+    max-width: 180px;
+    transition: transform 0.3s ease;
+}
+
+footer .footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo das Redes Sociais */
+footer .bi {
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+footer .bi:hover {
+    color: #0d6efd; /* Cor de hover azul */
+}
+
+footer .list-unstyled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+}
+
+footer .list-unstyled li {
+    margin: 0 10px;
+}
