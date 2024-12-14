@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (typingSpan.textContent.length > 0) {
             setTimeout(eraseWord, eraseDelay);
         } else {
-            // muda para a próxima palavra
+
             currentWordIndex = (currentWordIndex + 1) % words.length;
             wordCharIndex = 0;
             typeWord();
@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //& ---------------------------Skills -----------------------------
 
-// Skills
-    // Alternância de Habilidades
     const btnTecnicas = document.querySelector('#btnTecnicas');
     const btnSociais = document.querySelector('#btnSociais');
     const habilidadesTecnicas = document.querySelector('#tecnicas');
@@ -207,14 +205,44 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 });
 
 // Função para formatar o número de telefone com parênteses no DDD
+// Função para formatar o número de telefone
+// Função para formatar o número de telefone
 document.getElementById('phone').addEventListener('input', function (e) {
-    let phone = e.target.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
-    if (phone.length > 2 && phone.length <= 6) {
-        phone = `(${phone.substring(0, 2)}) ${phone.substring(2)}`;
+    const input = e.target;
+    let phone = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    const cursorPosition = input.selectionStart; // Posição atual do cursor
+    const isDeleting = input.value.length < input.oldValue?.length; // Verifica se está apagando
+
+    let formattedPhone = '';
+
+    if (phone.length > 0 && phone.length <= 2) {
+        formattedPhone = `(${phone}`;
+    } else if (phone.length > 2 && phone.length <= 6) {
+        formattedPhone = `(${phone.substring(0, 2)}) ${phone.substring(2)}`;
     } else if (phone.length > 6) {
-        phone = `(${phone.substring(0, 2)}) ${phone.substring(2, 7)}-${phone.substring(7, 11)}`;
+        formattedPhone = `(${phone.substring(0, 2)}) ${phone.substring(2, 7)}-${phone.substring(7, 11)}`;
     }
-    e.target.value = phone;
+
+    // Aplica o valor formatado, mas apenas se o usuário não estiver deletando
+    input.value = formattedPhone;
+
+    // Restaura a posição do cursor ao apagar
+    if (isDeleting) {
+        input.selectionStart = input.selectionEnd = cursorPosition;
+    }
+
+    // Armazena o valor antigo para comparar
+    input.oldValue = formattedPhone;
+});
+
+// Remoção completa ao apagar
+document.getElementById('phone').addEventListener('keydown', function (e) {
+    const key = e.key;
+    const currentValue = e.target.value;
+
+    if (key === 'Backspace' && currentValue.length <= 1) {
+        e.target.value = ''; // Limpa o campo ao apagar o último caractere
+    }
 });
 
 // Função para permitir apenas letras e limitar o tamanho do nome
@@ -226,4 +254,33 @@ document.getElementById('name').addEventListener('input', function (e) {
     e.target.value = input;
 });
 
+//& -------------------- SHEET MONKEY -------------------
 
+function handleSubmit(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    const form = document.getElementById('contactForm');
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Cria o objeto de dados a ser enviado
+    const formData = new FormData(form);
+
+    // Faz o envio dos dados para o Sheet Monkey
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            confirmationMessage.style.display = 'block';
+            form.reset(); // Reseta o formulário
+        } else {
+            throw new Error('Erro ao enviar formulário.');
+        }
+    })
+    .catch(error => {
+        errorMessage.style.display = 'block';
+        console.error(error);
+    });
+}
