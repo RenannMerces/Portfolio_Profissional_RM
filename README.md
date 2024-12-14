@@ -41,6 +41,6 @@ Se você deseja mais informações, discutir um projeto ou apenas conectar-se, e
 
 - E-mail: renanblitz29@gmail.com  
 - Telefone: +55 (75) 98154-8131  
-- Portfólio Online: [Link]  
+- Portfólio Online: https://renan-merces-portfolio.netlify.app/  
 
 Feito com 💻 e muita paixão pela tecnologia e design!  
