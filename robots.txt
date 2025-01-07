@@ -1,7 +1,0 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
-User-agent: *
-Allow:/
-
-Sitemap: https://renan-merces-portfolio.netlify.app/sitemap.xml
