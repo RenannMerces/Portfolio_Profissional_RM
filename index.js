@@ -50,6 +50,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }, cursorBlinkDelay);
 });
 
+//& --------------------------- Itens Aparecendo -----------------------
+
+const reveals = document.querySelectorAll('.reveal');
+
+function checkReveal() {
+    // Loop para verificar se cada elemento entrou na área visível da tela
+    reveals.forEach(reveal => {
+        const windowHeight = window.innerHeight; // Altura da janela
+        const elementTop = reveal.getBoundingClientRect().top; // Distância do topo do elemento até o topo da janela
+        const elementVisible = 100; // Distância (em px) para considerar o elemento como visível
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveal.classList.add('revealed');
+        } else {
+            reveal.classList.remove('revealed');
+        }
+    });
+}
+
+// Chama a função quando o usuário rola a página
+window.addEventListener('scroll', checkReveal);
+
+checkReveal();
+
 
 //& ---------------------------Skills -----------------------------
 
