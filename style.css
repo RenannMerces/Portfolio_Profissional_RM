@@ -735,3 +735,35 @@ footer {
   footer .footer-bottom a:hover {
     color: #fff;
   }
+
+/*& ---------------------- Botão voltar ao topo ---------------------*/
+
+  #btnVoltarAoTopo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(45deg, #026F6E, #1CA39E);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  #btnVoltarAoTopo.show {
+    opacity: 0.5;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  /* Efeito hover para dar um destaque ao botão */
+  #btnVoltarAoTopo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  }

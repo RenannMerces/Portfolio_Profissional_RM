@@ -308,3 +308,23 @@ function handleSubmit(event) {
         console.error(error);
     });
 }
+
+// Botão voltar ao topo
+const btnVoltarAoTopo = document.getElementById('btnVoltarAoTopo');
+
+// Exibe ou oculta o botão conforme o scroll
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    btnVoltarAoTopo.classList.add('show');
+  } else {
+    btnVoltarAoTopo.classList.remove('show');
+  }
+});
+
+// Ao clicar, retorna suavemente para o topo da página
+btnVoltarAoTopo.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
