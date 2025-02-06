@@ -738,7 +738,7 @@ footer {
 
 /*& ---------------------- Botão voltar ao topo ---------------------*/
 
-  #btnVoltarAoTopo {
+  .btnVoltarAoTopo {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -757,13 +757,13 @@ footer {
     z-index: 1000;
   }
 
-  #btnVoltarAoTopo.show {
+  .btnVoltarAoTopo.show {
     opacity: 0.5;
     visibility: visible;
     transform: translateY(0);
   }
   /* Efeito hover para dar um destaque ao botão */
-  #btnVoltarAoTopo:hover {
+  .btnVoltarAoTopo:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.4);
   }
