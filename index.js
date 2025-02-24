@@ -228,9 +228,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     }
 });
 
-// Função para formatar o número de telefone com parênteses no DDD
-// Função para formatar o número de telefone
-// Função para formatar o número de telefone
 document.getElementById('phone').addEventListener('input', function (e) {
     const input = e.target;
     let phone = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
@@ -317,11 +314,11 @@ const btnVoltarAoTopo2 = document.getElementById('btnVoltarAoTopo2');
 // Função para exibir ou ocultar os botões conforme o scroll
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 300) {
-    btnVoltarAoTopo?.classList.add('show');
-    btnVoltarAoTopo2?.classList.add('show');
+    btnVoltarAoTopo.classList.add('show');
+    btnVoltarAoTopo2.classList.add('show');
   } else {
-    btnVoltarAoTopo?.classList.remove('show');
-    btnVoltarAoTopo2?.classList.remove('show');
+    btnVoltarAoTopo.classList.remove('show');
+    btnVoltarAoTopo2.classList.remove('show');
   }
 });
 
@@ -334,5 +331,5 @@ const scrollToTop = () => {
 };
 
 // Adiciona o evento de clique aos botões, se existirem
-btnVoltarAoTopo?.addEventListener('click', scrollToTop);
-btnVoltarAoTopo2?.addEventListener('click', scrollToTop);
+btnVoltarAoTopo.addEventListener('click', scrollToTop);
+btnVoltarAoTopo2.addEventListener('click', scrollToTop);
