@@ -518,7 +518,7 @@ button.btn-outline-light:hover {
 }
 
 #faq .accordion-item {
-    border-radius: 25px !important;
+    border-radius: 5px !important;
     border:none;
     margin-bottom: 1rem;
     border-radius: 5px;
