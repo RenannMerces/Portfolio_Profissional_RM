@@ -135,13 +135,18 @@ html {
     text-align: center;
     font-size: 1.4rem;
     color: #cceeff;
-    transition: transform 0.2s ease, color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease !important;
   }
   
   .mobile-bottom-nav a:hover {
-    color: #ff5f57;
-    transform: scale(1.2);
+    color: #B74B4B !important;
+    transform: scale(1.2) !important;
   }
+
+  .mobile-bottom-nav a.active {
+    color: #B74B4B !important;
+  }
+
   
 
 /** ----------- Nab-bar-none ---------------- */
