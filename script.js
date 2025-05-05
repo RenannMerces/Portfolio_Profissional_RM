@@ -305,34 +305,6 @@ function handleSubmit(event) {
     });
 }
 
-// Botão voltar ao topo
-// Seleciona os botões pelo ID
-const btnVoltarAoTopo = document.getElementById('btnVoltarAoTopo');
-const btnVoltarAoTopo2 = document.getElementById('btnVoltarAoTopo2');
-
-// Função para exibir ou ocultar os botões conforme o scroll
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    btnVoltarAoTopo.classList.add('show');
-    btnVoltarAoTopo2.classList.add('show');
-  } else {
-    btnVoltarAoTopo.classList.remove('show');
-    btnVoltarAoTopo2.classList.remove('show');
-  }
-});
-
-// Função para rolar suavemente ao topo
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
-
-// Adiciona o evento de clique aos botões, se existirem
-btnVoltarAoTopo.addEventListener('click', scrollToTop);
-btnVoltarAoTopo2.addEventListener('click', scrollToTop);
-
 // Nav-bar trasnparente
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');

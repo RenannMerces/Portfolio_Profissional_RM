@@ -76,7 +76,8 @@ class="adopt-injector"></script>
 <body>
 
 <!-- Nav-Bar -->
-<nav class="navbar navbar-expand-lg fixed-top px-5"> <!-- AQUI aumenta o padding horizontal -->
+<nav class="navbar navbar-expand-lg fixed-top px-5 d-none d-lg-flex">
+    <!-- AQUI aumenta o padding horizontal -->
     <div class="container"> <!-- AQUI limita a largura e centraliza com espaços nas bordas -->
         <a class="navbar-brand text-light d-flex align-items-center me-auto" href="#">
             <img src="./src/Logo-extentidada-png.png" alt="Logo escrito RM-DEV na nav-bar do site." class="navbar-logo" loading="lazy">
@@ -102,6 +103,29 @@ class="adopt-injector"></script>
     window.onscroll = () =>
       document.querySelector('.navbar').classList.toggle('navbar-scrolled', window.scrollY > 50);
   </script>
+
+    <!-- Menu Mobile Bottom -->
+    <div class="mobile-bottom-nav d-flex fixed-bottom bg-dark py-2 justify-content-around align-items-center d-none d-lg-none">
+        <a href="#inicio-port" class="text-light text-center">
+        <i class="bi bi-house-fill"></i>
+        </a>
+        <a href="#sobre" class="text-light text-center">
+        <i class="bi bi-person-fill"></i>
+        </a>
+        <a href="#habilidades" class="text-light text-center">
+        <i class="bi bi-gear-fill"></i>
+        </a>
+        <a href="#projetos" class="text-light text-center">
+        <i class="bi bi-code-slash"></i>
+        </a>
+        <a href="#faq" class="text-light text-center">
+        <i class="bi bi-question-circle-fill"></i>
+        </a>
+        <a href="#contato" class="text-light text-center">
+        <i class="bi bi-envelope-fill"></i>
+        </a>
+    </div>
+  
 
 <!-- Seção inicial -->
 <section id="inicio-port" class="mt-5  secao-inicial container d-flex flex-column flex-md-row align-items-center justify-content-center min-vh-100 px-4 py-5">
@@ -496,10 +520,6 @@ class="adopt-injector"></script>
     </div>
 </section>
 
-<!-- Botão com ícone de seta para cima -->
-  <button id="btnVoltarAoTopo" class="btnVoltarAoTopo">
-    <i class="fas fa-chevron-up"></i>
-  </button>
 <!-- Footer -->
 
 <footer>
