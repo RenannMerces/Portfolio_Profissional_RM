@@ -332,3 +332,11 @@ const scrollToTop = () => {
 // Adiciona o evento de clique aos botões, se existirem
 btnVoltarAoTopo.addEventListener('click', scrollToTop);
 btnVoltarAoTopo2.addEventListener('click', scrollToTop);
+
+// Nav-bar trasnparente
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
+    });
+  });
