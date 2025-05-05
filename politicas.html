@@ -74,40 +74,57 @@ class="adopt-injector"></script>
 <body style="background-color: black !important;">
 
 <!-- Nav-Bar -->
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand text-light d-flex align-items-center" href="#">
-            <img src="./src/Logo-abreviada-png.png" alt="Logo escrito RM-DEV na nav-bar do site." class="navbar-logo " loading="lazy">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link me-3" href="index.html">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link me-3" href="index.html">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link me-3" href="index.html">Habilidades</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link me-3" href="index.html">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link me-3" href="index.html">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="index.html">Contato</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg fixed-top px-5 d-none d-lg-flex" style="background-color: rgba(6, 47, 75, 0.95) !important;">
+  <!-- AQUI aumenta o padding horizontal -->
+  <div class="container"> <!-- AQUI limita a largura e centraliza com espaços nas bordas -->
+      <a class="navbar-brand text-light d-flex align-items-center me-auto" href="#">
+          <img src="./src/Logo-extentidada-png.png" alt="Logo escrito RM-DEV na nav-bar do site." class="navbar-logo" loading="lazy">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link me-3" href="#inicio-port">Início</a></li>
+              <li class="nav-item"><a class="nav-link me-3" href="#sobre">Sobre</a></li>
+              <li class="nav-item"><a class="nav-link me-3" href="#habilidades">Habilidades</a></li>
+              <li class="nav-item"><a class="nav-link me-3" href="#projetos">Projetos</a></li>
+              <li class="nav-item"><a class="nav-link me-3" href="#faq">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+      </div>
+  </div>
 </nav>
 
-<section style="background-color: rgb(255, 255, 255); margin-top: 190px; padding: 40px 20px; color: #000000; font-family: 'Arial', sans-serif;" class="mt-5">
+<script>
+  window.onscroll = () =>
+    document.querySelector('.navbar').classList.toggle('navbar-scrolled', window.scrollY > 50);
+</script>
+
+  <!-- Menu Mobile Bottom -->
+  <div class="mobile-bottom-nav d-flex fixed-bottom bg-dark py-2 justify-content-around align-items-center d-flex d-lg-none">
+      <a href="#inicio-port" class="text-light text-center mobile-nav-link">
+        <i class="bi bi-house-fill"></i>
+      </a>
+      <a href="#sobre" class="text-light text-center mobile-nav-link">
+        <i class="bi bi-person-fill"></i>
+      </a>
+      <a href="#habilidades" class="text-light text-center mobile-nav-link">
+        <i class="bi bi-gear-fill"></i>
+      </a>
+      <a href="#projetos" class="text-light text-center mobile-nav-link">
+        <i class="bi bi-code-slash"></i>
+      </a>
+      <a href="#faq" class="text-light text-center mobile-nav-link">
+        <i class="bi bi-question-circle-fill"></i>
+      </a>
+      <a href="#contato" class="text-light text-center mobile-nav-link">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+  </div>
+
+<section style="background-color: rgb(255, 255, 255); margin-top: 0px !important; padding: 90px 20px; color: #000000; font-family: 'Arial', sans-serif;" class="mt-5">
     <div style="max-width: 800px; margin: 0 auto;">
         <h1 style="font-size: 2.5rem; font-weight: bold; color: #026F6E; text-align: center; margin-bottom: 30px; margin-top: 40px;">Política de Privacidade</h1>
 
@@ -197,11 +214,6 @@ class="adopt-injector"></script>
         <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">Para remover cookies do navegador, por favor olhe as instruções nesse nesse <a href="https://goadopt.io/blog/apagar-cookies-cache-navegador/" target="_blank">link</a>.</p>
     </div>
 </section>
-
-<!-- Botão com ícone de seta para cima -->
-<button id="btnVoltarAoTopo2" class="btnVoltarAoTopo">
-  <i class="fas fa-chevron-up"></i>
-</button>
 
 <!-- Footer -->
 <footer>
