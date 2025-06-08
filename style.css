@@ -201,7 +201,7 @@ html {
 }
 
 #inicio-port .imagem-perfil img {
-    width: 32vw;
+    width: 50vw;
     border-radius: 50%;
     box-shadow: 0 0 25px rgba(50, 0, 233, 0.5); 
     transition: transform 0.3s linear, box-shadow 0.3s linear;
