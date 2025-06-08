@@ -37,10 +37,10 @@ html {
     transition: background-color 0.3s ease-in-out, box-shadow 0.6s ease-in-out !important;
   }
   
-  .navbar.navbar-scrolled {
-    background-color: rgba(6, 47, 75, 0.95) !important; /* cor próxima da sua com opacidade */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
-  }
+.navbar.navbar-scrolled {
+  background-color: rgba(1, 75, 74, 0.95) !important; /* #014B4A com opacidade */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+}
   
 .navbar-toggler {
     border: none;
@@ -124,7 +124,7 @@ html {
 /** ---------------Mobile-menu ----------- */
 
 .mobile-bottom-nav {
-    background-color: rgba(6, 61, 75, 0.95) !important;
+    background-color: rgba(1, 75, 74, 0.95) !important; /* #014B4A com opacidade */
     height: 60px;
     z-index: 1050;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4) !important;
