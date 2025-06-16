@@ -375,7 +375,7 @@ html {
 /** ------------------------------ SKILLS ----------------------------*/
 
 #habilidades {
-    background: linear-gradient(to bottom, #034a49, #160D18);
+    background: linear-gradient(to right, #023332, #160D18) !important;
 }
 
 .list-group-item {
@@ -545,7 +545,7 @@ button.btn-outline-light:hover {
 /** -------------------------------- FAQ ----------------------------------*/
 
 #faq{
-    background: linear-gradient(to bottom, #034a49, #160D18);
+    background: linear-gradient(to right, #023332, #160D18) !important;
 }
 
 #faq p{
