@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Desenvolvedor Web",
         "Web Designer",
         "Front-End",
+        "Designer Gráfico",
         "Programador"
     ];
     let currentWordIndex = 0;
