@@ -333,14 +333,6 @@ html {
     padding: 60px 0;
 }
 
-#sobre img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#sobre img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
 
 #sobre h2 {
     color: #034341;
@@ -376,12 +368,6 @@ html {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#sobre img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 
