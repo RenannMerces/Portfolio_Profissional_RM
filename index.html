@@ -132,7 +132,7 @@ class="adopt-injector"></script>
         <img src="./src/renan-logo.png" alt="Foto do rosto do desenvolvedor Renan Mercês" class="img-fluid rounded-circle shadow floating-img" loading="lazy">
     </div>
     <div class="conteudo-inicial text-center text-md-start" style="flex: 1;">
-        <h1>Oi! meu nome é  <<span>Renan <span class="sobrenome">Mercês</span></span>/></h1>
+        <h1>Oi<span style="color: #1ca39e;">!</span> meu nome é  <<span>Renan <span class="sobrenome">Mercês</span></span>/></h1>
         <h3 class="typing-text">E eu sou <span id="typing-span"></span></h3>
         <p class="descricao lead text-justify">Desenvolvedor de interfaces intuitivas e sistemas eficientes, combinando design moderno com performance robusta.</p>
         <div class="icones-sociais d-flex justify-content-center align-items-center justify-content-md-start mb-4">
@@ -195,22 +195,28 @@ class="adopt-injector"></script>
     </div>
 </section>
 
-
-
 <!-- Habilidades -->
-<section id="habilidades" class="py-5 bg-dark text-light reveal">
+<section id="habilidades" class="py-5 text-light reveal">
     <div class="container mt-5">
 
-        <div class="d-flex justify-content-center mb-4 ">
-            <button id="btnTecnicas" class="btn btn-outline-light me-3 active">TÉCNICAS</button>
-            <button id="btnSociais" class="btn btn-outline-light">SOCIAIS</button>
+        <!-- Linha de título + botões -->
+        <div class="row align-items-center mb-5">
+            <!-- Coluna Título -->
+            <div class="col-12 col-md-6 text-center text-md-start">
+                <h3 id="skill-titulo" class="text-uppercase fw-bold habilidades-tec m-0">Habilidades</h3>
+            </div>
+            <!-- Coluna Botões -->
+            <div class="col-12 col-md-6 text-center text-md-end mt-3 mt-md-0">
+                <button id="btnTecnicas" class="btn btn-outline-light me-3 active">TÉCNICAS</button>
+                <button id="btnSociais" class="btn btn-outline-light">SOCIAIS</button>
+            </div>
         </div>
+
         <!-- Indicador de Transição do Botão -->
         <div id="btnColor" class="transition-indicator"></div>
 
         <!-- Habilidades Técnicas -->
         <div id="tecnicas" class="habilidades-cards mb-5">
-            <h3 class="text-uppercase fw-bold text-center mb-4 habilidades-tec mb-5 mt-5">Habilidades Técnicas</h3>
             <div class="row g-4">
                 <div class="col-md-3">
                     <div class="card skill-card text-center p-4 h-100 shadow-lg">
@@ -272,7 +278,6 @@ class="adopt-injector"></script>
         </div>
         <!-- Habilidades Sociais -->
         <div id="sociais" class="habilidades-cards mb-5" style="display: none;">
-            <h3 class="text-uppercase fw-bold text-center mb-5 mt-5">Habilidades Sociais</h3>
             <div class="row g-3">
                 <!-- Cards Sociais -->
                 <div class="col-md-4">
@@ -315,6 +320,27 @@ class="adopt-injector"></script>
                         <i class="fas fa-compass fa-2x mb-2" style="color: #1de9b6;"></i>
                         <h6 class="fw-bold text-uppercase mb-2">Liderança</h6>
                         <p class="text-muted small">Inspiração e orientação para alcançar metas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card text-center p-3 h-100 shadow">
+                        <i class="fas fa-clock fa-2x mb-2" style="color: #17a2b8;"></i>
+                        <h6 class="fw-bold text-uppercase mb-2">Gestão de Tempo</h6>
+                        <p class="text-muted small">Organizar tarefas e priorizar atividades com eficiência.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card text-center p-3 h-100 shadow">
+                        <i class="fas fa-sync-alt fa-2x mb-2" style="color: #dc3545;"></i>
+                        <h6 class="fw-bold text-uppercase mb-2">Adaptabilidade</h6>
+                        <p class="text-muted small">Capacidade de se ajustar a mudanças e novos desafios.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card text-center p-3 h-100 shadow">
+                        <i class="fas fa-hand-holding-heart fa-2x mb-2" style="color: #e83e8c;"></i>
+                        <h6 class="fw-bold text-uppercase mb-2">Empatia</h6>
+                        <p class="text-muted small">Compreender e respeitar diferentes pontos de vista.</p>
                     </div>
                 </div>
             </div>
