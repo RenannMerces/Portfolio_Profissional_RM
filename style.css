@@ -357,6 +357,14 @@ body {
 
 /** ------------------------------ SKILLS ----------------------------*/
 
+#habilidades{
+    background-image: url("src/Desktop.png"); /* Substitua pelo caminho correto da imagem */
+    background-attachment: fixed !important; /* Mantém o fundo fixo na rolagem */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 .list-group-item {
     background: #c4c4c4;
     border: none;
@@ -515,6 +523,14 @@ button.btn-outline-light:hover {
 }
 
 /** -------------------------------- FAQ ----------------------------------*/
+
+#faq {
+    background-image: url("src/Desktop.png"); /* coloque o caminho correto da imagem */
+    background-repeat: no-repeat;               /* evita que a imagem se repita */
+    background-position: center center;         /* centraliza a imagem */
+    background-size: cover;                     /* faz a imagem cobrir toda a área */
+    background-attachment: fixed !important;               /* mantém a imagem fixa na rolagem */
+}
 
 #faq p{
     color: white !important;
@@ -692,6 +708,11 @@ button.btn-outline-light:hover {
 /*& ------------------------------ Footer ---------------------------------*/
 
 footer {
+    background-image: url("src/Desktop.png"); /* Substitua pelo caminho correto da imagem */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed !important;
     color: #fff;
     padding: 30px 0;
     font-family: "Montserrat", sans-serif;
