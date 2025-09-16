@@ -11,12 +11,7 @@ html, body {
 body {
     font-family: "Inter", sans-serif;
     color: white;
-    background-color: #023332;
-    background-image: url("src/Desktop.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; /* cobre toda a área */
-    background-attachment: fixed;
+    background: linear-gradient(to right, #023332, #202020);
 }
 
 ::-webkit-scrollbar {
